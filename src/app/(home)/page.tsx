@@ -15,7 +15,8 @@ import { gitConfig } from '@/lib/shared';
 
 export default async function Page(props: PageProps<'/'>) {
   const params = await props.params;
-  const page = source.getPage(params.slug ?? []);
+  const slug = 'slug' in params ? (params as any).slug : [];
+  const page = source.getPage(slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
