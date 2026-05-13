@@ -1,9 +1,11 @@
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
+import { ApiPlayground } from './api-playground';
 
 export function getMDXComponents(components?: MDXComponents) {
   return {
     ...defaultMdxComponents,
+    ApiPlayground,
     ...components,
   } satisfies MDXComponents;
 }
