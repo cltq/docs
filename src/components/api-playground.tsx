@@ -7,7 +7,7 @@ export function ApiPlayground() {
     <div className="not-prose -mx-4 md:-mx-6 lg:-mx-8">
       <ApiReferenceReact
         configuration={{
-          url: 'https://api.applefumi.xyz/openapi.yaml',
+          url: '/api/openapi',
           hideDownloadButton: true,
           baseServerURL: 'https://api.applefumi.xyz',
         }}
